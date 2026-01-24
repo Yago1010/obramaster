@@ -1,14 +1,14 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
   output: "export",
+
+  basePath: isProd ? "/JLConstrucao" : "",
+  assetPrefix: isProd ? "/JLConstrucao/" : "",
+
   images: {
     unoptimized: true,
-  },
-  env: {
-    NEXT_PUBLIC_BASE_PATH:
-      process.env.NODE_ENV === "production"
-        ? "/JLConstrucao"
-        : "",
   },
 };
 
