@@ -17,12 +17,12 @@ import "swiper/css/pagination";
 
 const midias = [
   // Imagens
-  { type: "image", src: "./obras/fotos/1.jpeg" },
-  { type: "image", src: "./obras/fotos/2.jpeg" },
-  { type: "image", src: "./obras/fotos/3.jpeg" },
-  { type: "image", src: "./obras/fotos/4.jpeg" },
-  { type: "image", src: "./obras/fotos/5.jpeg" },
-  { type: "image", src: "./obras/fotos/6.jpeg" },
+  { type: "image", src: "/obras/fotos/1.jpeg" },
+  { type: "image", src: "/obras/fotos/2.jpeg" },
+  { type: "image", src: "/obras/fotos/3.jpeg" },
+  { type: "image", src: "/obras/fotos/4.jpeg" },
+  { type: "image", src: "/obras/fotos/5.jpeg" },
+  { type: "image", src: "/obras/fotos/6.jpeg" },
 
   // Vídeos
   { type: "video", src: "./obras/videos/1.mp4" },
@@ -45,13 +45,13 @@ export default function ReformaComercial() {
         <section className="relative h-[70vh] flex items-center justify-center">
           <div className="absolute inset-0">
             <Image
-              src="./obras/fotos/1.jpeg"
+              src="/obras/fotos/1.jpeg"
               alt="Reforma Comercial"
               fill
               priority
               className="object-cover opacity-30"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-slate-950" />
+            <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/70 to-slate-950" />
           </div>
 
           <div className="relative z-10 max-w-4xl px-6 text-center">
