@@ -1,3 +1,4 @@
-export const basePath =   process.env.NODE_ENV === "production"
+export const basePath =   typeof window !== "undefined" &&
+  window.location.pathname.startsWith("/JLConstrucao")
     ? "/JLConstrucao"
     : "";

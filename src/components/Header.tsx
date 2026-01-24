@@ -19,7 +19,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-2">
             <Image
               src={`${basePath}/logojl.png`}
-              alt="jlcontrucao"
+              alt="Obramaster"
               width={160}
               height={40}
               priority
