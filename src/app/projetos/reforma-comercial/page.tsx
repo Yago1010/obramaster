@@ -25,10 +25,10 @@ const midias = [
   { type: "image", src: "/obras/fotos/6.jpeg" },
 
   // Vídeos
-  { type: "video", src: "./obras/videos/1.mp4" },
-  { type: "video", src: "./obras/videos/2.mp4" },
-  { type: "video", src: "./obras/videos/3.mp4" },
-  { type: "video", src: "./obras/videos/4.mp4" }
+  { type: "video", src: "/obras/videos/1.mp4" },
+  { type: "video", src: "/obras/videos/2.mp4" },
+  { type: "video", src: "/obras/videos/3.mp4" },
+  { type: "video", src: "/obras/videos/4.mp4" }
 ];
 
 export default function ReformaComercial() {
@@ -46,7 +46,7 @@ export default function ReformaComercial() {
           <div className="absolute inset-0">
             <Image
               src="/obras/fotos/1.jpeg"
-              alt="Reforma Comercial"
+              alt="Jlpag2"
               fill
               priority
               className="object-cover opacity-30"
@@ -134,7 +134,7 @@ export default function ReformaComercial() {
           >
             {midias.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className="relative w-full h-[420px] md:h-[600px] bg-black flex items-center justify-center">
+                <div className="relative w-full h-105 md:h-150 bg-black flex items-center justify-center">
                   {item.type === "image" ? (
                     <Image
                       src={item.src}

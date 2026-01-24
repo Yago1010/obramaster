@@ -17,7 +17,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="/logojl.png"
-              alt="ObraMaster"
+              alt="jlcontrucao"
               width={160}
               height={40}
               priority
