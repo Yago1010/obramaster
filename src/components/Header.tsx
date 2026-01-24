@@ -16,7 +16,7 @@ export default function Header() {
           {/* LOGO */}
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/logojl.png"
+              src="./logojl.png"
               alt="ObraMaster"
               width={160}
               height={40}

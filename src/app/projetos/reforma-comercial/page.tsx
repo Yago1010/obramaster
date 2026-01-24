@@ -17,18 +17,18 @@ import "swiper/css/pagination";
 
 const midias = [
   // Imagens
-  { type: "image", src: "/obras/fotos/1.jpeg" },
-  { type: "image", src: "/obras/fotos/2.jpeg" },
-  { type: "image", src: "/obras/fotos/3.jpeg" },
-  { type: "image", src: "/obras/fotos/4.jpeg" },
-  { type: "image", src: "/obras/fotos/5.jpeg" },
-  { type: "image", src: "/obras/fotos/6.jpeg" },
+  { type: "image", src: "./obras/fotos/1.jpeg" },
+  { type: "image", src: "./obras/fotos/2.jpeg" },
+  { type: "image", src: "./obras/fotos/3.jpeg" },
+  { type: "image", src: "./obras/fotos/4.jpeg" },
+  { type: "image", src: "./obras/fotos/5.jpeg" },
+  { type: "image", src: "./obras/fotos/6.jpeg" },
 
   // Vídeos
-  { type: "video", src: "/obras/videos/1.mp4" },
-  { type: "video", src: "/obras/videos/2.mp4" },
-  { type: "video", src: "/obras/videos/3.mp4" },
-  { type: "video", src: "/obras/videos/4.mp4" }
+  { type: "video", src: "./obras/videos/1.mp4" },
+  { type: "video", src: "./obras/videos/2.mp4" },
+  { type: "video", src: "./obras/videos/3.mp4" },
+  { type: "video", src: "./obras/videos/4.mp4" }
 ];
 
 export default function ReformaComercial() {
