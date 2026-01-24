@@ -10,6 +10,7 @@ import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Contato from "@/components/Contato";
+import { basePath } from "@/lib/basePath";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -17,18 +18,18 @@ import "swiper/css/pagination";
 
 const midias = [
   // Imagens
-  { type: "image", src: "/obras/fotos/1.jpeg" },
-  { type: "image", src: "/obras/fotos/2.jpeg" },
-  { type: "image", src: "/obras/fotos/3.jpeg" },
-  { type: "image", src: "/obras/fotos/4.jpeg" },
-  { type: "image", src: "/obras/fotos/5.jpeg" },
-  { type: "image", src: "/obras/fotos/6.jpeg" },
+  { type: "image", src: `${basePath}/obras/fotos/1.jpeg` },
+  { type: "image", src: `${basePath}/obras/fotos/2.jpeg` },
+  { type: "image", src: `${basePath}/obras/fotos/3.jpeg` },
+  { type: "image", src: `${basePath}/obras/fotos/4.jpeg` },
+  { type: "image", src: `${basePath}/obras/fotos/5.jpeg` },
+  { type: "image", src: `${basePath}/obras/fotos/6.jpeg` },
 
   // Vídeos
-  { type: "video", src: "/obras/videos/1.mp4" },
-  { type: "video", src: "/obras/videos/2.mp4" },
-  { type: "video", src: "/obras/videos/3.mp4" },
-  { type: "video", src: "/obras/videos/4.mp4" }
+  { type: "video", src: `${basePath}/obras/videos/1.mp4` },
+  { type: "video", src: `${basePath}/obras/videos/2.mp4` },
+  { type: "video", src: `${basePath}/obras/videos/3.mp4` },
+  { type: "video", src: `${basePath}/obras/videos/4.mp4` },
 ];
 
 export default function ReformaComercial() {
@@ -45,7 +46,7 @@ export default function ReformaComercial() {
         <section className="relative h-[70vh] flex items-center justify-center">
           <div className="absolute inset-0">
             <Image
-              src="/obras/fotos/1.jpeg"
+              src={`${basePath}/obras/fotos/1.jpeg`}
               alt="Jlpag2"
               fill
               priority
@@ -107,14 +108,10 @@ export default function ReformaComercial() {
             modules={[Navigation, Pagination, Autoplay]}
             navigation
             pagination={{ clickable: true }}
-            autoplay={{
-              delay: 20000,
-              disableOnInteraction: false
-            }}
+            autoplay={{ delay: 20000, disableOnInteraction: false }}
             spaceBetween={30}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             onSlideChange={(swiper) => {
-              // pausa todos os vídeos
               document.querySelectorAll("video").forEach(video => {
                 video.pause();
                 video.currentTime = 0;
@@ -140,7 +137,6 @@ export default function ReformaComercial() {
                       src={item.src}
                       alt="Projeto de reforma comercial"
                       fill
-                      sizes="(max-width: 768px) 100vw, 1200px"
                       className="object-contain"
                     />
                   ) : (

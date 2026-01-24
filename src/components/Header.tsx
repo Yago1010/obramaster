@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import Link from "next/link"
 import Image from "next/image"
+import { basePath } from "@/lib/basePath";
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -16,7 +18,7 @@ export default function Header() {
           {/* LOGO */}
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/logojl.png"
+              src={`${basePath}/logojl.png`}
               alt="jlcontrucao"
               width={160}
               height={40}
