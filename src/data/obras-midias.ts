@@ -6,7 +6,7 @@ export const midiasObrasCompletas: MidiaItem[] = [
     type: "image" as const,
     src: `/obras/fotos/${n}.jpeg`,
   })),
-  ...Array.from({ length: 23 }, (_, i) => ({
+  ...Array.from({ length: 24 }, (_, i) => ({
     type: "video" as const,
     src: `/obras/videos/${i + 1}.mp4`,
   })),
