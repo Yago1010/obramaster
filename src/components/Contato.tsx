@@ -54,7 +54,7 @@ Mensagem: ${mensagem}
                 <Mail className="mt-1 text-blue-400" />
                 <div>
                   <div className="font-semibold">E-mail</div>
-                  <div className="text-gray-300">contato@obramaster.com.br</div>
+                  <div className="text-gray-300">joselima78321@gmail.com</div>
                 </div>
               </div>
 
@@ -63,7 +63,8 @@ Mensagem: ${mensagem}
                 <div>
                   <div className="font-semibold">Endereço</div>
                   <div className="text-gray-300">
-                    Av. Paulista, 1000 - São Paulo, SP
+                    Rua do Doutor César da Fonseca 
+                    42-B Piratininga, Niterói
                   </div>
                 </div>
               </div>

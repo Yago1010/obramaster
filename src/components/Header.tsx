@@ -4,10 +4,12 @@ import React, { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import Link from "next/link"
 import Image from "next/image"
-
+import { usePathname } from "next/navigation"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const contatoHref = pathname === "/" ? "/#contato" : "#contato"
 
   return (
     <header className="bg-slate-900 text-white sticky top-0 z-50 shadow-lg">
@@ -17,7 +19,7 @@ export default function Header() {
           {/* LOGO */}
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src={"/logojl.png"}
+              src="/logojl.png"
               alt="Obramaster"
               width={160}
               height={40}
@@ -27,11 +29,11 @@ export default function Header() {
 
           {/* Menu Desktop */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#inicio" className="hover:text-blue-400 transition">Início</a>
-            <a href="#servicos" className="hover:text-blue-400 transition">Serviços</a>
-            <a href="#projetos" className="hover:text-blue-400 transition">Projetos</a>
-            <a href="#sobre" className="hover:text-blue-400 transition">Sobre</a>
-            <a href="#contato" className="hover:text-blue-400 transition">Contato</a>
+            <Link href="/#inicio" className="hover:text-blue-400 transition">Início</Link>
+            <Link href="/#servicos" className="hover:text-blue-400 transition">Serviços</Link>
+            <Link href="/#projetos" className="hover:text-blue-400 transition">Projetos</Link>
+            <Link href="/#sobre" className="hover:text-blue-400 transition">Sobre</Link>
+            <Link href={contatoHref} className="hover:text-blue-400 transition">Contato</Link>
           </nav>
 
           {/* Botão Menu Mobile */}
@@ -47,11 +49,11 @@ export default function Header() {
         {/* Menu Mobile */}
         {isMenuOpen && (
           <nav className="md:hidden pb-4 space-y-3">
-            <a href="#inicio" className="block hover:text-blue-400 transition">Início</a>
-            <a href="#servicos" className="block hover:text-blue-400 transition">Serviços</a>
-            <a href="#projetos" className="block hover:text-blue-400 transition">Projetos</a>
-            <a href="#sobre" className="block hover:text-blue-400 transition">Sobre</a>
-            <a href="#contato" className="block hover:text-blue-400 transition">Contato</a>
+            <Link href="/#inicio" className="block hover:text-blue-400 transition">Início</Link>
+            <Link href="/#servicos" className="block hover:text-blue-400 transition">Serviços</Link>
+            <Link href="/#projetos" className="block hover:text-blue-400 transition">Projetos</Link>
+            <Link href="/#sobre" className="block hover:text-blue-400 transition">Sobre</Link>
+            <Link href={contatoHref} className="block hover:text-blue-400 transition">Contato</Link>
           </nav>
         )}
       </div>

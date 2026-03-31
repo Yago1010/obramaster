@@ -15,8 +15,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-BR" suppressHydrationWarning>
+      <body className={`${inter.className} antialiased min-h-screen bg-background text-foreground`}>
+        {children}
+
+        {/* 
+           Componente Sonner: 
+           - richColors: deixa os avisos coloridos (verde para sucesso, vermelho para erro)
+           - closeButton: adiciona o 'X' para fechar
+           - position: define onde as notificações aparecem
+        */}
+        
+      </body>
     </html>
   )
 }
